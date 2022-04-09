@@ -78,26 +78,26 @@ function checkRadioStatus() {
 
 //Event Handler
 function displaySide() {
-document.querySelector('h4').innerHTML = `${randomSide}!`;
-applyDishStyles ()
+  document.querySelector('h4').innerHTML = `${randomSide}!`;
+  applyDishStyles ()
 }
 
 function displayMain() {
-document.querySelector('h4').innerHTML = `${randomMain}!`;
-applyDishStyles ()
+  document.querySelector('h4').innerHTML = `${randomMain}!`;
+  applyDishStyles ()
 }
 
 function displayDessert() {
-document.querySelector('h4').innerHTML = `${randomDessert}!`;
-applyDishStyles ()
+  document.querySelector('h4').innerHTML = `${randomDessert}!`;
+  applyDishStyles ()
 }
 
 function displayEntireMeal() {
-document.querySelector('h4').innerHTML = `${randomMealMain} with a side of ${randomMealSide} and a ${randomMealDessert} for dessert!`;
-document.querySelector('svg').style.display = "none";
-document.querySelector('.selected-Dish').style.display = "block";
-document.querySelector('h4').style.fontSize = "1.50em";
-document.querySelector('#clear').style.marginTop = "52px";
+  document.querySelector('h4').innerHTML = `${randomMealMain} with a side of ${randomMealSide} and a ${randomMealDessert} for dessert!`;
+  document.querySelector('svg').style.display = "none";
+  document.querySelector('.selected-Dish').style.display = "block";
+  document.querySelector('h4').style.fontSize = "1.50em";
+  document.querySelector('#clear').style.marginTop = "52px";
 }
 
 function applyDishStyles() {
@@ -107,9 +107,7 @@ function applyDishStyles() {
   document.querySelector('#clear').style.marginTop = "100px";
 }
 
-
 //Random Element Variables
-
 var randomSide = sidesArray[Math.floor(Math.random() * sidesArray.length)];
 var randomMain = mainsArray[Math.floor(Math.random() * mainsArray.length)];
 var randomDessert = dessertArray[Math.floor(Math.random() * dessertArray.length)];
