@@ -93,31 +93,39 @@ function checkRadioStatus() {
 //DOM display functions
 
 function displaySide() {
-document.querySelector('h4').innerHTML = `${randomSide}`;
+document.querySelector('h4').innerHTML = `${randomSide}!`;
 document.querySelector('svg').style.display = "none";
 document.querySelector('.selected-Dish').style.display = "block";
+document.querySelector('h4').style.fontSize = "2em";
+document.querySelector('#clear').style.marginTop = "100px";
 }
 
 function displayMain() {
-document.querySelector('h4').innerHTML = `${randomMain}`;
+document.querySelector('h4').innerHTML = `${randomMain}!`;
 document.querySelector('svg').style.display = "none";
 document.querySelector('.selected-Dish').style.display = "block";
+document.querySelector('h4').style.fontSize = "2em";
+document.querySelector('#clear').style.marginTop = "100px";
 }
 
 function displayDessert() {
-document.querySelector('h4').innerHTML = `${randomDessert}`;
+document.querySelector('h4').innerHTML = `${randomDessert}!`;
 document.querySelector('svg').style.display = "none";
 document.querySelector('.selected-Dish').style.display = "block";
+document.querySelector('h4').style.fontSize = "2em";
+document.querySelector('#clear').style.marginTop = "100px";
 }
 
 function displayEntireMeal() {
 document.querySelector('h4').innerHTML = `${randomMain} with a side of ${randomSide} and a ${randomDessert} for dessert!`;
 document.querySelector('svg').style.display = "none";
 document.querySelector('.selected-Dish').style.display = "block";
+document.querySelector('h4').style.fontSize = "1.50em";
+document.querySelector('#clear').style.marginTop = "52px";
 }
 
 
-//Access random Element
+//Random Element Variables
 
 var randomSide = sidesArray[Math.floor(Math.random() * sidesArray.length)];
 var randomMain = mainsArray[Math.floor(Math.random() * mainsArray.length)];
