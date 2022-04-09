@@ -125,7 +125,7 @@ document.querySelector('#clear').style.marginTop = "52px";
 }
 
 
-//Access random Element
+//Random Element Variables
 
 var randomSide = sidesArray[Math.floor(Math.random() * sidesArray.length)];
 var randomMain = mainsArray[Math.floor(Math.random() * mainsArray.length)];
