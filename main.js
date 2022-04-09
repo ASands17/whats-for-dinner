@@ -1,17 +1,13 @@
 //Query Selector radio buttons
-
 var sideButton = document.querySelector("#side");
 var mainButton = document.querySelector("#mainDish");
 var dessertButton = document.querySelector("#dessert");
 var entireMealButton = document.querySelector("#entireMeal");
 
 //Query selector other buttons
-
 var cookButton = document.getElementById("letsCook");
 
-
 //Dish arrays
-
 var sidesArray = [
 'Miso Glazed Carrots',
 'Coleslaw',
@@ -23,8 +19,7 @@ var sidesArray = [
 'Shrimp Summer Rolls',
 'Garlic Butter Mushrooms',
 'Hush Puppies'
-]
-
+];
 var mainsArray = [
 'Spaghetti and Meatballs',
 'Pineapple Chicken',
@@ -39,8 +34,7 @@ var mainsArray = [
 'Chicken Fried Rice',
 'Sheet Pan Fajitas',
 'Margarita Pizza'
-]
-
+];
 var dessertArray = [
 'Apple Pie',
 'Lemon Meringue Pie',
@@ -60,17 +54,9 @@ var dessertArray = [
 'Tart Tatin',
 'Croissants',
 'Eclairs'
-]
+];
 
-var radioArray = [
-  sideButton,
-  mainButton,
-  dessertButton
-]
-
-//Event listeners and handlers
-
-
+//Event listener
 cookButton.addEventListener('click', checkRadioStatus);
 
 function checkRadioStatus() {
@@ -90,38 +76,35 @@ function checkRadioStatus() {
   }
 }
 
-//DOM display functions
-
+//Event Handler
 function displaySide() {
 document.querySelector('h4').innerHTML = `${randomSide}!`;
-document.querySelector('svg').style.display = "none";
-document.querySelector('.selected-Dish').style.display = "block";
-document.querySelector('h4').style.fontSize = "2em";
-document.querySelector('#clear').style.marginTop = "100px";
+applyDishStyles ()
 }
 
 function displayMain() {
 document.querySelector('h4').innerHTML = `${randomMain}!`;
-document.querySelector('svg').style.display = "none";
-document.querySelector('.selected-Dish').style.display = "block";
-document.querySelector('h4').style.fontSize = "2em";
-document.querySelector('#clear').style.marginTop = "100px";
+applyDishStyles ()
 }
 
 function displayDessert() {
 document.querySelector('h4').innerHTML = `${randomDessert}!`;
-document.querySelector('svg').style.display = "none";
-document.querySelector('.selected-Dish').style.display = "block";
-document.querySelector('h4').style.fontSize = "2em";
-document.querySelector('#clear').style.marginTop = "100px";
+applyDishStyles ()
 }
 
 function displayEntireMeal() {
-document.querySelector('h4').innerHTML = `${randomMain} with a side of ${randomSide} and a ${randomDessert} for dessert!`;
+document.querySelector('h4').innerHTML = `${randomMealMain} with a side of ${randomMealSide} and a ${randomMealDessert} for dessert!`;
 document.querySelector('svg').style.display = "none";
 document.querySelector('.selected-Dish').style.display = "block";
 document.querySelector('h4').style.fontSize = "1.50em";
 document.querySelector('#clear').style.marginTop = "52px";
+}
+
+function applyDishStyles() {
+  document.querySelector('svg').style.display = "none";
+  document.querySelector('.selected-Dish').style.display = "block";
+  document.querySelector('h4').style.fontSize = "2em";
+  document.querySelector('#clear').style.marginTop = "100px";
 }
 
 
@@ -130,3 +113,7 @@ document.querySelector('#clear').style.marginTop = "52px";
 var randomSide = sidesArray[Math.floor(Math.random() * sidesArray.length)];
 var randomMain = mainsArray[Math.floor(Math.random() * mainsArray.length)];
 var randomDessert = dessertArray[Math.floor(Math.random() * dessertArray.length)];
+
+var randomMealSide = sidesArray[Math.floor(Math.random() * sidesArray.length)];
+var randomMealMain = mainsArray[Math.floor(Math.random() * mainsArray.length)];
+var randomMealDessert = dessertArray[Math.floor(Math.random() * dessertArray.length)];
