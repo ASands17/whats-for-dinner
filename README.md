@@ -1,23 +1,23 @@
 # What's for Dinner?
 
-## Overview
+##Introduction
+What's for Dinner? If you've recently asked yourself this question, this webpage
+is for you. Generate a random suggestion for a side dish, a main dish, or a dessert. Or, generate an entire three course meal!
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+#How to Run This Page
+1. Fork this repo and clone it to your local repository.
+2. In terminal, cd into this directory.
+3. Run open index.html to open the page.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+#Technologies Used
+What's for Dinner makes use of Javascript, CSS, and HTML.
 
-## Learning Goals
+#Features
+- Generate a random side dish, main dish, or dessert.
+- Generate a random three course meal.
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+#Thoughts on Future Iterations
+- Add the ability to clear dishes without selecting another radio button.
+- Create functionality for the user to click on a dish and see a recipe.
+- Give user the capability to add their own dishes and recipes to be selected.
