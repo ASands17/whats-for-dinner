@@ -78,22 +78,22 @@ function checkRadioStatus() {
 
 //Event Handler
 function displaySide() {
-  document.querySelector('h4').innerHTML = `${randomSide}!`;
-  applyDishStyles ()
+  document.querySelector('h4').innerHTML = `${getRandomItem(sidesArray)}!`;
+  applyDishStyles ();
 }
 
 function displayMain() {
-  document.querySelector('h4').innerHTML = `${randomMain}!`;
+  document.querySelector('h4').innerHTML = `${getRandomItem(mainsArray)}!`;
   applyDishStyles ()
 }
 
 function displayDessert() {
-  document.querySelector('h4').innerHTML = `${randomDessert}!`;
+  document.querySelector('h4').innerHTML = `${getRandomItem(dessertArray)}!`;
   applyDishStyles ()
 }
 
 function displayEntireMeal() {
-  document.querySelector('h4').innerHTML = `${randomMealMain} with a side of ${randomMealSide} and a ${randomMealDessert} for dessert!`;
+  document.querySelector('h4').innerHTML = `${getRandomItem(mainsArray)} with a side of ${getRandomItem(sidesArray)} and a ${getRandomItem(dessertArray)} for dessert!`;
   document.querySelector('svg').style.display = "none";
   document.querySelector('.selected-Dish').style.display = "block";
   document.querySelector('h4').style.fontSize = "1.50em";
@@ -107,11 +107,6 @@ function applyDishStyles() {
   document.querySelector('#clear').style.marginTop = "100px";
 }
 
-//Random Element Variables
-var randomSide = sidesArray[Math.floor(Math.random() * sidesArray.length)];
-var randomMain = mainsArray[Math.floor(Math.random() * mainsArray.length)];
-var randomDessert = dessertArray[Math.floor(Math.random() * dessertArray.length)];
-
-var randomMealSide = sidesArray[Math.floor(Math.random() * sidesArray.length)];
-var randomMealMain = mainsArray[Math.floor(Math.random() * mainsArray.length)];
-var randomMealDessert = dessertArray[Math.floor(Math.random() * dessertArray.length)];
+function getRandomItem(mealArray) {
+  return mealArray[Math.floor(Math.random() * (mealArray.length))];
+}
