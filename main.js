@@ -74,23 +74,23 @@ function checkRadioStatus() {
   } else if (entireMealStatus.checked) {
     displayEntireMeal()
   }
-}
+};
 
 //Event Handler
 function displaySide() {
   document.querySelector('#foodText').innerHTML = `${getRandomItem(sidesArray)}!`;
   applyDishStyles ();
-}
+};
 
 function displayMain() {
   document.querySelector('#foodText').innerHTML = `${getRandomItem(mainsArray)}!`;
   applyDishStyles ()
-}
+};
 
 function displayDessert() {
   document.querySelector('#foodText').innerHTML = `${getRandomItem(dessertArray)}!`;
   applyDishStyles ()
-}
+};
 
 function displayEntireMeal() {
   document.querySelector('#foodText').innerHTML = `${getRandomItem(mainsArray)} with a side of ${getRandomItem(sidesArray)} and a ${getRandomItem(dessertArray)} for dessert!`;
@@ -98,15 +98,15 @@ function displayEntireMeal() {
   document.querySelector('.selected-Dish').style.display = "block";
   document.querySelector('#foodText').style.fontSize = "1.50em";
   document.querySelector('#clear').style.marginTop = "52px";
-}
+};
 
 function applyDishStyles() {
   document.querySelector('svg').style.display = "none";
   document.querySelector('.selected-Dish').style.display = "block";
   document.querySelector('#foodText').style.fontSize = "2em";
   document.querySelector('#clear').style.marginTop = "100px";
-}
+};
 
 function getRandomItem(mealArray) {
   return mealArray[Math.floor(Math.random() * (mealArray.length))];
-}
+};
