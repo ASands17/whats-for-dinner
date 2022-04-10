@@ -16,7 +16,7 @@ var sidesArray = [
 'Sweet Potato Tots',
 'Coconut Rice',
 'Caeser Salad',
-'Shrimp Summer Rolls',
+'Roasted Brussel Sprouts',
 'Garlic Butter Mushrooms',
 'Hush Puppies'
 ];
@@ -26,14 +26,14 @@ var mainsArray = [
 'Shakshuka',
 'Thai Yellow Curry',
 'Bibimbap',
-'Chicken Parmesean',
+'Kimchi Jjigae',
 'Butternut Squash Soup',
-'BBQ Chicken Burgers',
+'Chicken Adobo',
 'Ramen',
-'Empanadas',
+'Harissa Salmon',
 'Chicken Fried Rice',
 'Sheet Pan Fajitas',
-'Margarita Pizza'
+'Smoked Mac and Cheese'
 ];
 var dessertArray = [
 'Apple Pie',
@@ -78,32 +78,32 @@ function checkRadioStatus() {
 
 //Event Handler
 function displaySide() {
-  document.querySelector('h4').innerHTML = `${getRandomItem(sidesArray)}!`;
+  document.querySelector('#foodText').innerHTML = `${getRandomItem(sidesArray)}!`;
   applyDishStyles ();
 }
 
 function displayMain() {
-  document.querySelector('h4').innerHTML = `${getRandomItem(mainsArray)}!`;
+  document.querySelector('#foodText').innerHTML = `${getRandomItem(mainsArray)}!`;
   applyDishStyles ()
 }
 
 function displayDessert() {
-  document.querySelector('h4').innerHTML = `${getRandomItem(dessertArray)}!`;
+  document.querySelector('#foodText').innerHTML = `${getRandomItem(dessertArray)}!`;
   applyDishStyles ()
 }
 
 function displayEntireMeal() {
-  document.querySelector('h4').innerHTML = `${getRandomItem(mainsArray)} with a side of ${getRandomItem(sidesArray)} and a ${getRandomItem(dessertArray)} for dessert!`;
+  document.querySelector('#foodText').innerHTML = `${getRandomItem(mainsArray)} with a side of ${getRandomItem(sidesArray)} and a ${getRandomItem(dessertArray)} for dessert!`;
   document.querySelector('svg').style.display = "none";
   document.querySelector('.selected-Dish').style.display = "block";
-  document.querySelector('h4').style.fontSize = "1.50em";
+  document.querySelector('#foodText').style.fontSize = "1.50em";
   document.querySelector('#clear').style.marginTop = "52px";
 }
 
 function applyDishStyles() {
   document.querySelector('svg').style.display = "none";
   document.querySelector('.selected-Dish').style.display = "block";
-  document.querySelector('h4').style.fontSize = "2em";
+  document.querySelector('#foodText').style.fontSize = "2em";
   document.querySelector('#clear').style.marginTop = "100px";
 }
 
